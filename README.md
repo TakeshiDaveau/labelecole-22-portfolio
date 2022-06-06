@@ -1,0 +1,1 @@
+> Projet réalisé pour les étudiants de Label École, afin de leur fournir un exemple d'un site portfolio

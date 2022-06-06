@@ -1,0 +1,181 @@
+/* Reset css : ici je désactive certains affichage de base du navigateurs qui m'embêtent  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Mon CSS à moi */
+/* Ici en général je mets en premier le CSS qui s'applique sur les balises, exemple: p {} (sans . ni #) */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  background-color: #2b2d42;
+  color: #f7f7f9;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  color: #f7f7f9;
+  text-decoration: none;
+}
+a:hover {
+  font-weight: bold;
+}
+
+a:hover {
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 48px;
+}
+h2 {
+  color: #e86a92;
+  margin-bottom: 24px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ensuite je mets les class CSS génériques et réutilisables, en général on appel ça des "helpers" */
+.font-bold {
+  font-weight: bold;
+}
+
+.display-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+/* Pour finir je mets les class plus spécifique à mon code HTML */
+/* Header + navigation */
+.page-header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgba(247, 247, 249, 0.16);
+  margin-bottom: 48px;
+  padding: 0 48px;
+}
+
+.page-header > * {
+  height: 100%;
+}
+
+.navigation-list {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation-item {
+  text-transform: uppercase;
+  margin-left: 48px;
+}
+
+.navigation-item:first-child {
+  margin-left: 0;
+}
+
+.navigation-item .navigation--selected {
+  color: #e86a92;
+}
+
+/* Contenu */
+.main-content {
+  /* Ça permet d'avoir un contenu centré verticalement */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 48px;
+  /* Ici je prends 100% du viewport et j'enlève les 48px de marge du header, les 80px du header, les 120px du footer et les 48px de marge du footer */
+  height: calc(100vh - 48px - 80px - 120px - 48px);
+}
+
+.main-title {
+  font-size: 48px;
+}
+
+.section-content {
+  border-left: 1px solid rgba(247, 247, 249, 0.16);
+  padding-left: 48px;
+  margin-left: 48px;
+}
+
+.section-content p {
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  /* background-color: #1d1d1e; */
+  border-top: 1px solid rgba(247, 247, 249, 0.16);
+  width: 100%;
+  margin-top: 48px;
+  padding: 0 48px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-container {
+  flex-direction: row;
+  align-items: center;
+}
+.contact-list {
+  display: flex;
+  flex-direction: row;
+}
+.contact-item {
+  margin-left: 24px;
+}
+.contact-item:first-child {
+  margin-left: 0;
+}
